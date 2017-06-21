@@ -55,9 +55,9 @@ public class driveTrain extends Subsystem {
     	double z = Robot.oi.joystick1.getTwist();
     	
     	// Filters the joystick values
-    	double xOut = sensitivity * (0.7 * lastX + 0.3 * x);
-    	double yOut = sensitivity * (0.7 * lastY + 0.3 * y);
-    	double zOut = sensitivity * (0.7 * lastZ + 0.3 * z);
+    	double xOut = sensitivity * (0.5 * lastX + 0.5 * x);
+    	double yOut = sensitivity * (0.5 * lastY + 0.5 * y);
+    	double zOut = sensitivity * (0.5 * lastZ + 0.5 * z);
 
     	// Sets the drive speed
     	robotDrive.mecanumDrive_Cartesian(x, y, z, 0);

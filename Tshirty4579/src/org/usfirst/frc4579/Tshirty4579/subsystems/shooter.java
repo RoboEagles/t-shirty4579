@@ -44,9 +44,11 @@ public class shooter extends Subsystem {
     public void toggle(){
     	if (setting == 1){
     		setting ++;
+    		System.out.println("Shooting at the second setting");
     	}
     	else if (setting == 2){
     		setting = 1;
+    		System.out.println("Shooting at the first setting");
     	}
     	else{
     		System.out.println("Error in calculating the setting. Shooting at the first setting");
@@ -59,12 +61,15 @@ public class shooter extends Subsystem {
     public void shoot(){
     	if (setting == 1){
     		robotSole.set(true);
-    		Timer.delay(.02);
+    		Timer.delay(.04);
     	}
     	else if (setting == 2){
     		robotSole.set(true);
     		Timer.delay(.06);
     	}
+    }
+    
+    public void close(){
     	robotSole.set(false);
     }
     
