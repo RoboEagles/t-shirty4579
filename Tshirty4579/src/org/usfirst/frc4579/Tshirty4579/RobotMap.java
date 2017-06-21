@@ -79,7 +79,7 @@ public class RobotMap {
         shooterrobotSole = new Solenoid(0, 0);
         LiveWindow.addActuator("shooter", "robotSole", shooterrobotSole);
         
-        shootercompressor = new Compressor(0);
+        shootercompressor = new Compressor(1);
         
         
 
