@@ -69,11 +69,14 @@ public class shooter extends Subsystem {
     	}
     }
     
+    // Closes the robot solenoid
     public void close(){
     	robotSole.set(false);
     }
     
+    // Enables and disables the compressor
     public void compressorState(){
+    	compressor.setClosedLoopControl(false);
     	if (compressor.enabled()){
     		compressor.stop();
     	}
@@ -93,6 +96,7 @@ public class shooter extends Subsystem {
 
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
+    	//I did break this robot.
     }
 }
 

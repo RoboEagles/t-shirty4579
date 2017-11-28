@@ -41,6 +41,7 @@ public class shoot extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	System.out.print("Shooting T-shirt!");
     	Robot.shooter.shoot();
     }
 

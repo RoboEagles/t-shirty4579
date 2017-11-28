@@ -55,9 +55,9 @@ public class driveTrain extends Subsystem {
     	double z = Robot.oi.joystick1.getTwist();
     	
     	// Filters the joystick values
-    	double xOut = (sensitivity * (0.75 * lastX + 0.25 * x));
-    	double yOut = (sensitivity * (0.75 * lastY + 0.25 * y));
-    	double zOut = (sensitivity * (0.75 * lastZ + 0.25 * z));
+    	double xOut = (sensitivity * (0.5 * lastX + 0.5 * x));
+    	double yOut = (sensitivity * (0.5 * lastY + 0.5 * y));
+    	double zOut = (sensitivity * (0.5 * lastZ + 0.5 * z));
     	
     	//Squaring the inputs
     	xOut = Math.pow(xOut, 3);
