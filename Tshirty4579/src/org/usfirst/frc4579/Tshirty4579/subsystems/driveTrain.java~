@@ -48,6 +48,8 @@ public class driveTrain extends Subsystem {
     double lastY = 0;    
     double lastZ = 0;
     
+    double rotation = 0;
+    
     public void drive(double sensitivity){
     	// Getting raw joystick values
     	double x = Robot.oi.joystick1.getX();
@@ -77,6 +79,12 @@ public class driveTrain extends Subsystem {
     	robotDrive.stopMotor();
     }
     
+    // Gets the rotation from the encoder
+    public double getRotation() {
+    	rotation = leftEncoder.getRate();
+    	
+    	return rotation;
+    }
     
     public void fullSpeed(double x){
     	leftFront.set(x);
