@@ -68,7 +68,7 @@ public class OI {
         joystick1 = new Joystick(0);
         
         compressorButton = new JoystickButton(joystick1, 9);
-        compressorButton.whileHeld(new changeCompressor());
+        compressorButton.whenPressed(new changeCompressor());
         speedButton = new JoystickButton(joystick1, 12);
         speedButton.whenPressed(new fullSpeed());
         canonDown = new JoystickButton(joystick1, 3);
@@ -76,7 +76,7 @@ public class OI {
         canonUp = new JoystickButton(joystick1, 5);
         canonUp.whileHeld(new aim());
         toggleButton = new JoystickButton(joystick1, 2);
-        toggleButton.whenPressed(new sToggle());
+        toggleButton.whenPressed(new shootToggle());
         shootButton = new JoystickButton(joystick1, 1);
         shootButton.whenPressed(new shoot());
 
@@ -85,7 +85,7 @@ public class OI {
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
         SmartDashboard.putData("shoot", new shoot());
         SmartDashboard.putData("drive", new drive());
-        SmartDashboard.putData("sToggle", new sToggle());
+        SmartDashboard.putData("shootToggle", new shootToggle());
         SmartDashboard.putData("aim", new aim());
         SmartDashboard.putData("fullSpeed", new fullSpeed());
         SmartDashboard.putData("changeCompressor", new changeCompressor());
