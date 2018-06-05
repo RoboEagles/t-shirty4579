@@ -17,6 +17,10 @@ import edu.wpi.first.wpilibj.CounterBase.EncodingType;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.PIDSourceType;
+<<<<<<< HEAD
+=======
+import edu.wpi.first.wpilibj.RobotDrive;
+>>>>>>> origin/master
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.VictorSP;
@@ -38,7 +42,12 @@ public class RobotMap {
     public static SpeedController driveTrainleftBack;
     public static SpeedController driveTrainrightBack;
     public static SpeedController driveTrainrightFront;
+<<<<<<< HEAD
     public static MecanumDrive driveTrainrobotDrive;
+=======
+    public static RobotDrive driveTrainrobotDrive;
+    public static Encoder driveTrainleftEncoder;
+>>>>>>> origin/master
     public static SpeedController aimeraimMotor;
     public static DigitalInput aimerfrontSwitch;
     public static DigitalInput aimerbackSwitch;
@@ -65,13 +74,26 @@ public class RobotMap {
         driveTrainrightFront = new VictorSP(3);
         LiveWindow.addActuator("driveTrain", "rightFront", (VictorSP) driveTrainrightFront);
         driveTrainrightFront.setInverted(false);
+<<<<<<< HEAD
         driveTrainrobotDrive = new MecanumDrive(driveTrainleftFront, driveTrainleftBack,
+=======
+        driveTrainrobotDrive = new RobotDrive(driveTrainleftFront, driveTrainleftBack,
+>>>>>>> origin/master
               driveTrainrightFront, driveTrainrightBack);
         LiveWindow.addActuator("driveTrain", "robotDrive", driveTrainrobotDrive);
         driveTrainrobotDrive.setSafetyEnabled(true);
         driveTrainrobotDrive.setExpiration(0.1);
         driveTrainrobotDrive.setMaxOutput(1.0);
 
+<<<<<<< HEAD
+=======
+        driveTrainrobotDrive.setInvertedMotor(RobotDrive.MotorType.kFrontRight, true);
+        driveTrainrobotDrive.setInvertedMotor(RobotDrive.MotorType.kRearRight, true);
+        driveTrainleftEncoder = new Encoder(2, 3, false, EncodingType.k1X);
+        LiveWindow.addSensor("driveTrain", "leftEncoder", driveTrainleftEncoder);
+        driveTrainleftEncoder.setDistancePerPulse(0.07536);
+        driveTrainleftEncoder.setPIDSourceType(PIDSourceType.kRate);
+>>>>>>> origin/master
         aimeraimMotor = new VictorSP(4);
         LiveWindow.addActuator("aimer", "aimMotor", (VictorSP) aimeraimMotor);
         aimeraimMotor.setInverted(false);
@@ -81,10 +103,14 @@ public class RobotMap {
         aimerbackSwitch = new DigitalInput(1);
         LiveWindow.addSensor("aimer", "backSwitch", aimerbackSwitch);
         
-        shooterrobotSole = new Solenoid(0, 0);
+        shooterrobotSole = new Solenoid(1, 0);
         LiveWindow.addActuator("shooter", "robotSole", shooterrobotSole);
         
+<<<<<<< HEAD
         shootercompressor = new Compressor(0);
+=======
+        shootercompressor = new Compressor(1);
+>>>>>>> origin/master
         LiveWindow.addActuator("shooter", "compressor", shootercompressor);
         
 

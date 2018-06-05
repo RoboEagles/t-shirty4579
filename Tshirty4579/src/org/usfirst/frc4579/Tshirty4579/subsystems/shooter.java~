@@ -59,6 +59,17 @@ public class shooter extends Subsystem {
     
     // the robot shoots depending on what setting it is at
     public void shoot(){
+<<<<<<< HEAD
+=======
+//    	if (setting == 1){
+//    		robotSole.set(true);
+//    		//Timer.delay(.04);
+//    	}
+//    	else if (setting == 2){
+//    		robotSole.set(true);
+//    		//Timer.delay(.06);
+//    	}
+>>>>>>> origin/master
     	robotSole.set(true);
     	System.out.println("Shooting");
     }

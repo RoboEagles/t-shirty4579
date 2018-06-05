@@ -39,7 +39,11 @@ Children:
           validators: [DigitalChannel]
           value: '3'
       Base: Quadrature Encoder
+<<<<<<< HEAD
       Name: leftEncoder
+=======
+      Name: driveEncoder
+>>>>>>> origin/master
     - Children:
       - Children: []
         Properties:
@@ -139,7 +143,7 @@ Children:
         Safety Expiration Time: !!robotbuilder.data.properties.DoubleProperty {default: 0.1,
           name: Safety Expiration Time, validators: null, value: 0.1}
         Safety Enabled: !!robotbuilder.data.properties.BooleanProperty {default: true,
-          name: Safety Enabled, validators: null, value: true}
+          name: Safety Enabled, validators: null, value: false}
         Left Front Motor: !!robotbuilder.data.properties.ChildSelectionProperty
           default: 0
           name: Left Front Motor
@@ -206,6 +210,20 @@ Children:
           value: '1'
       Base: Limit Switch
       Name: backSwitch
+    - Children: []
+      Properties:
+        Input Channel (Analog): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['0', '1', '2', '3', '4', '5', '6', '7']
+          default: '0'
+          name: Input Channel (Analog)
+          validators: [AnalogInput]
+          value: '0'
+        Full Range: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: Full Range,
+          validators: null, value: 1.0}
+        Offset: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: Offset,
+          validators: null, value: 0.0}
+      Base: Analog Potentiometer
+      Name: aimPot
     Properties:
       Default command parameters: !!robotbuilder.data.properties.ParametersProperty
         default: []
@@ -343,7 +361,7 @@ Children:
           name: Command
           type: Command
           validators: *id008
-          value: sToggle
+          value: shootToggle
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id009
           default: whileHeld
@@ -465,7 +483,7 @@ Children:
           default: whileHeld
           name: When to Run
           validators: null
-          value: whileHeld
+          value: whenPressed
       Base: Joystick Button
       Name: compressorButton
     Properties:
@@ -500,7 +518,11 @@ Children:
       Run When Disabled: !!robotbuilder.data.properties.BooleanProperty {default: false,
         name: Run When Disabled, validators: null, value: false}
       Autonomous Selection: !!robotbuilder.data.properties.BooleanProperty {default: false,
+<<<<<<< HEAD
         name: Autonomous Selection, validators: null, value: false}
+=======
+        name: Autonomous Selection, validators: null, value: true}
+>>>>>>> origin/master
     Base: Command
     Name: Autonomous Command
   - Children: []
@@ -568,7 +590,7 @@ Children:
       Autonomous Selection: !!robotbuilder.data.properties.BooleanProperty {default: false,
         name: Autonomous Selection, validators: null, value: false}
     Base: Command
-    Name: sToggle
+    Name: shootToggle
   - Children: []
     Properties:
       Parameters: !!robotbuilder.data.properties.ParametersProperty
@@ -639,8 +661,8 @@ Children:
   Base: Commands
   Name: Commands
 Properties:
-  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\admin\workspace',
-    extension: null, folder: true, name: Eclipse Workspace, validators: null, value: 'C:\Users\admin\git\t-shirty4579'}
+  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\suhey\workspace',
+    extension: null, folder: true, name: Eclipse Workspace, validators: null, value: 'C:\Users\suhey\git\t-shirty4579'}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
   Autonomous command parameters: !!robotbuilder.data.properties.ParametersProperty
@@ -658,7 +680,7 @@ Properties:
     name: Export Subsystems, validators: null, value: true}
   Simulation World File: !!robotbuilder.data.properties.StringProperty {default: /usr/share/frcsim/worlds/GearsBotDemo.world,
     name: Simulation World File, validators: null, value: /usr/share/frcsim/worlds/GearsBotDemo.world}
-  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\admin\',
+  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\suhey\',
     extension: null, folder: true, name: Wiring file location, validators: null, value: 'C:\Users\admin\'}
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
     name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}

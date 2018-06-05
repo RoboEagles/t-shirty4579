@@ -89,7 +89,7 @@ public class OI {
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
         SmartDashboard.putData("shoot", new shoot());
         SmartDashboard.putData("drive", new drive());
-        SmartDashboard.putData("sToggle", new sToggle());
+        SmartDashboard.putData("shootToggle", new shootToggle());
         SmartDashboard.putData("aim", new aim());
         SmartDashboard.putData("fullSpeed", new fullSpeed());
         SmartDashboard.putData("changeCompressor", new changeCompressor());
