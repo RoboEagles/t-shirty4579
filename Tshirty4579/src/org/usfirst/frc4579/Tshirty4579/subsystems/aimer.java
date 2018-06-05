@@ -41,10 +41,10 @@ public class aimer extends Subsystem {
     // here. Call these from Commands.
 
     public void moveUp(){
-    	aimMotor.set(-.4);
+    	aimMotor.set(-.2);
     }
     public void moveDown(){
-    	aimMotor.set(.4);
+    	aimMotor.set(.2);
     }
     
     public void stop(){

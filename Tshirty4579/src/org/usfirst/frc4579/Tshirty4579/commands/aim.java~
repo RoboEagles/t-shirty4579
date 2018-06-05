@@ -41,12 +41,12 @@ public class aim extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if (Robot.oi.joystick1.getRawButton(5)){
-        	System.out.println("Moving the canon up!!!");
+    	if (Robot.oi.joystick.getRawButton(5)){
+        	System.out.println("Moving the cannon up!!!");
     		Robot.aimer.moveUp();
     	}
-    	else if (Robot.oi.joystick1.getRawButton(3)){
-        	System.out.println("Moving the canon down!!!");
+    	else if (Robot.oi.joystick.getRawButton(3)){
+        	System.out.println("Moving the cannon down!!!");
     		Robot.aimer.moveDown();
     	}
     	else{
