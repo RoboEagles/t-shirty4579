@@ -39,11 +39,7 @@ Children:
           validators: [DigitalChannel]
           value: '3'
       Base: Quadrature Encoder
-<<<<<<< HEAD
-      Name: leftEncoder
-=======
       Name: driveEncoder
->>>>>>> origin/master
     - Children:
       - Children: []
         Properties:
@@ -518,11 +514,7 @@ Children:
       Run When Disabled: !!robotbuilder.data.properties.BooleanProperty {default: false,
         name: Run When Disabled, validators: null, value: false}
       Autonomous Selection: !!robotbuilder.data.properties.BooleanProperty {default: false,
-<<<<<<< HEAD
-        name: Autonomous Selection, validators: null, value: false}
-=======
         name: Autonomous Selection, validators: null, value: true}
->>>>>>> origin/master
     Base: Command
     Name: Autonomous Command
   - Children: []
