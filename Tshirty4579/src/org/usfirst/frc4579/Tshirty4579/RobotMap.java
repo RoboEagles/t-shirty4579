@@ -65,16 +65,16 @@ public class RobotMap {
         
         driveTrainleftFront = new VictorSP(3);
         LiveWindow.addActuator("driveTrain", "leftFront", (VictorSP) driveTrainleftFront);
-        driveTrainleftFront.setInverted(false);
+        driveTrainleftFront.setInverted(true);
         driveTrainleftBack = new VictorSP(2);
         LiveWindow.addActuator("driveTrain", "leftBack", (VictorSP) driveTrainleftBack);
-        driveTrainleftBack.setInverted(false);
+        driveTrainleftBack.setInverted(true);
         driveTrainleftMotors = new SpeedControllerGroup(driveTrainleftFront, driveTrainleftBack  );
         LiveWindow.addActuator("driveTrain", "leftMotors", driveTrainleftMotors);
         
         driveTrainrobotDrive = new DifferentialDrive(driveTrainleftMotors, driveTrainrightMotors);
         LiveWindow.addActuator("driveTrain", "robotDrive", driveTrainrobotDrive);
-        driveTrainrobotDrive.setSafetyEnabled(true);
+        driveTrainrobotDrive.setSafetyEnabled(false);
         driveTrainrobotDrive.setExpiration(0.1);
         driveTrainrobotDrive.setMaxOutput(1.0);
 
