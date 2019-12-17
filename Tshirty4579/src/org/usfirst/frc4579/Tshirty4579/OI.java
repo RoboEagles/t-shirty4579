@@ -79,9 +79,9 @@ public class OI {
         compressorButton.whenPressed(new changeCompressor());
         speedButton = new JoystickButton(controller, 12);
         speedButton.whenPressed(new fullSpeed());
-        canonDown = new JoystickButton(controller, 3);
+        canonDown = new JoystickButton(controller, 2);
         canonDown.whileHeld(new aim());
-        canonUp = new JoystickButton(controller, 5);
+        canonUp = new JoystickButton(controller, 3);
         canonUp.whileHeld(new aim());
         toggleButton = new JoystickButton(controller, 2);
         toggleButton.whenPressed(new shootToggle());

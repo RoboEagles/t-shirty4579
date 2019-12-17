@@ -67,7 +67,7 @@ public class driveTrain extends Subsystem {
     public void drive(double sensitivity){
     	// Getting raw joystick values 
     	double x = -Robot.oi.joystick.getX();
-    	double y = -Robot.oi.joystick.getY();
+    	double y = Robot.oi.joystick.getY();
     	double z = .75 * Robot.oi.joystick.getTwist();
     	
     	//Create a joystick dead zone.
